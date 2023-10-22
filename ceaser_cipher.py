@@ -96,8 +96,6 @@ if start == 3:
 
 
     for x in arrayLength:
-        #Error: list length to short (needs to be in the parameters of the length while decoding the message with all posibilities)
-        #Error: It is not shuffling through the whole letters list for each word
 
         while n <= 52:
             shift = 1
@@ -114,5 +112,3 @@ if start == 3:
 
             n += 1
     
-
-# Brute force code (vjkubkubcbegcugtbekrjgt)
