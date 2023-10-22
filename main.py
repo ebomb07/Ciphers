@@ -12,9 +12,3 @@ x = int(input(("[1] ceaser cipher\n\n---> ")))
 if x == 1:
     clear()
     subprocess.run(['python','ceaser_cipher.py'])
-
-
-if x == 2:
-    for i in range(5):
-        print(i, end=" ")
-        print()
