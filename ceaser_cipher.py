@@ -31,8 +31,6 @@ if start == 1:
 
     fArray = list(arr)
 
-    print("\n\noriginal: " + user_input)
-
 
 
     for x in arrayLength:
@@ -42,9 +40,7 @@ if start == 1:
         fArray.extend(arr)
         
 
-    print("ceaser cipher ecryption: ") 
-
-    print(*fArray, sep = "")
+    print("ceaser cipher ecryption: \"" +str(string_maker(fArray))+"\"\n") 
 
 
 #decrypt
@@ -72,8 +68,7 @@ if start == 2:
         print(fArray)
 
 
-    print("ceaser cipher ecryption: \n") 
-    print(*fArray, sep = "")
+    print("\nceaser cipher decryption: \"" +str(string_maker(fArray))+"\"\n")  
 
 
 #Brute force
