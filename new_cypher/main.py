@@ -12,11 +12,12 @@ def uploadPayload():
     with open('config.json', 'r') as f:
         config = json.load(f)
     argv = sys.argv[1:]  # Skip the script name
-    active = True
     for i in range(len(argv)):
+        active = True
         while active:
             arg = argv[i].casefold()
             if arg != "-h":
+                active = False
                 match arg:
                     case "enc":
                         config['enc'] = True
@@ -26,7 +27,6 @@ def uploadPayload():
                         config['payload'].append("-cc")
                         try:
                             if isinstance(int(argv[i + 1]), int) == True:
-                                print("Hello")
                                 config['shift'] = int(argv[i + 1])
                         except ValueError:
                             config['shift'] = -1
@@ -84,7 +84,5 @@ if __name__ == "__main__":
     try:
         uploadPayload()
     finally:
-
-        #remove sleep later
-        time.sleep(2)
+        # time.sleep(2)
         resetConfig()
